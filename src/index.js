@@ -1,5 +1,5 @@
 function displaysalesorderProcess(response) {
-  console.log("sales order process generated");
+
   new Typewriter("salesOrder", {
   strings: response.data.answer,
   autoStart: true,
@@ -24,9 +24,6 @@ let salesorderElement = document.querySelector("#sales-order");
 salesorderElement.classList.remove("hidden");
 salesorderElement.innerHTML = `<div class="generating">⏳Generating sales order process ${instructionsInput.value}</div>`;
 
-console.log("Generating sales order");
-console.log(`Prompt: ${prompt}`);
-console.log(`Context: ${context}`);
 
 axios.get(apiURL).then(displaysalesorderProcess);
 
