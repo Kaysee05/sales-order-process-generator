@@ -15,6 +15,7 @@
     </header>
 
     <main>
+        <div class="form-container">
         <form id="sales-order-generator-form">
             <input type="text" 
             placeholder="Enter the type of sales order"
@@ -25,8 +26,11 @@
             id="user-instructions"
             />
             <input type="submit" class="button" />
+            <div class="hint">i.e: Cash, Rush or Supply</div>
+        </div>
         </form>
-        <div class="sales-order" id="sales-order"></div>
+
+        <div class="sales-order hidden" id="sales-order"></div>
     </main>
 
 <footer>

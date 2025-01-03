@@ -20,6 +20,10 @@ let prompt = `Userinstructions: Generate a sales order process about ${instructi
 let context = "You are an experienced sales order manager expert and excel in everything sales related. Your mission is to generate a process with all the 5 steps of a sales order in basic HTML. Sign the sales order process with 'SheCodes AI' inside a strong element at the end of the sales process and NOT at the beginning";
 let apiURL = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
 
+let salesorderElement = document.querySelector("#sales-order");
+salesorderElement.classList.remove("hidden");
+salesorderElement.innerHTML = `<div class="generating">⏳Generating sales order process ${instructionsInput.value}</div>`;
+
 console.log("Generating sales order");
 console.log(`Prompt: ${prompt}`);
 console.log(`Context: ${context}`);
